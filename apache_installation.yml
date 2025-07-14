@@ -1,0 +1,9 @@
+- name: Install apache # name of teh playbook
+  hosts: web # target
+  become: yes # TRUE True# Needs sudo/adminstrator access
+  
+  tasks:
+    - name: Apache installation
+      dnf:
+        name: httpd
+        state: present
