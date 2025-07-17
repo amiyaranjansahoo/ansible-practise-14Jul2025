@@ -1,0 +1,10 @@
+- name: gather acts 
+  hosts: web 
+  
+  tasks:
+    - name: gathering the information for architecture
+      debug:
+        var: ansible_facts.architecture
+    - name: gathering the information for bios_date
+      debug:
+        var: ansible_facts.bios_date

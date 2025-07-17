@@ -1,7 +1,0 @@
-- name: gather acts 
-  hosts: web 
-  
-  tasks:
-    - name: gathering the information task
-      debug:
-        var: ansible_facts.all_ipv6_addresses

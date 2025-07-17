@@ -1,0 +1,14 @@
+- name: Install httpd,git,docker,zip using loop 
+  hosts: web
+  become: yes   
+  
+  tasks:
+    - name: using loop
+      dnf:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - httpd
+        - git
+        - docker
+        - zip

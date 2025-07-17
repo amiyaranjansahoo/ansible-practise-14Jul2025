@@ -1,0 +1,7 @@
+- name: Install httpd,git,docker,zip using loop 
+  hosts: web
+  become: yes   
+  
+  tasks:
+    - name: Run a script
+      script: /home/ec2-user/myshellscript.sh
